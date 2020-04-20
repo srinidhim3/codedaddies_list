@@ -3,45 +3,21 @@
 <div class="container">
     <h2 style="text-align: center">{{ search|title }}</h2>
     <div class="row">
+        {% for post in final_postings %}
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
-                    <a href="/"><img src="https://dogtime.com/assets/uploads/2018/10/puppies-cover-1280x720.jpg" alt=""></a>
+                    <a href="/"><img src="{{ post.3 }}" alt=""></a>
                 </div>
                 <div class="card-content">
-                    <p> test </p>
+                    <p>{{ post.0 }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/">View listing: Price Test PRICE</a>
+                    <a href="{{ post.1 }}">Price : {{ post.2 }}</a>
                 </div>
             </div>
         </div>
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://dogtime.com/assets/uploads/2018/10/puppies-cover-1280x720.jpg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p> test </p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test PRICE</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://dogtime.com/assets/uploads/2018/10/puppies-cover-1280x720.jpg" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p> test </p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test PRICE</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
